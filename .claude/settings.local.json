@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\", \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\cmd\\\\git.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\Git\\\\cmd\\\\git.exe\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Get-Command git -ErrorAction SilentlyContinue)",
+      "PowerShell(winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; if \\(-not \\(Test-Path $git\\)\\) { $git = \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" }; & $git init; & $git add .; & $git -c user.email=\"hello.theorbit@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Add zain.md with portfolio info\"; & $git branch -M main)"
+    ]
+  }
+}
