@@ -9,7 +9,12 @@
       "PowerShell(Remove-Item -Recurse -Force \"C:\\\\All projects\\\\personal porfolio website\\\\_reference_friend\" -Confirm:$false)",
       "PowerShell(Remove-Item -Force \"C:\\\\All projects\\\\personal porfolio website\\\\zain.md\" -Confirm:$false)",
       "PowerShell(Start-Process \"C:\\\\All projects\\\\personal porfolio website\\\\index.html\")",
-      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git -c user.email=\"zainn8847@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Build modern dark glassmorphism portfolio for Zain Nawaz\"; & $git push origin main)"
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git -c user.email=\"zainn8847@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Build modern dark glassmorphism portfolio for Zain Nawaz\"; & $git push origin main)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npm install --prefix \"C:\\\\All projects\\\\personal porfolio website\\\\server\")",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git status --short)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git status --short)"
     ]
   }
 }

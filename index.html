@@ -76,8 +76,7 @@
     <div class="home-visual reveal">
       <div class="avatar-ring">
         <div class="avatar">
-          <!-- Replace with your photo: <img src="me.png" alt="Zain Nawaz"> -->
-          <span class="avatar-initials">ZN</span>
+          <img src="zain.jpeg" alt="Zain Nawaz" />
         </div>
       </div>
       <div class="floating-badge badge-1"><i class="bx bxl-html5"></i></div>
@@ -99,8 +98,7 @@
   <section class="about" id="about">
     <div class="about-img reveal">
       <div class="img-frame">
-        <span class="avatar-initials big">ZN</span>
-        <!-- Replace with: <img src="about.png" alt="About Zain Nawaz"> -->
+        <img src="zain.jpeg" alt="About Zain Nawaz" />
       </div>
     </div>
     <div class="about-text reveal">
@@ -248,11 +246,11 @@
       </div>
 
       <form class="contact-form reveal" id="contactForm">
-        <div class="field"><input type="text" id="name" required /><label>Your Name</label></div>
-        <div class="field"><input type="email" id="email" required /><label>Your Email</label></div>
-        <div class="field"><input type="text" id="subject" /><label>Subject</label></div>
-        <div class="field"><textarea id="message" rows="5" required></textarea><label>Your Message</label></div>
-        <button type="submit" class="btn btn-primary full">Send Message <i class="bx bx-send"></i></button>
+        <div class="field"><input type="text" id="name" name="name" required /><label>Your Name</label></div>
+        <div class="field"><input type="email" id="email" name="email" required /><label>Your Email</label></div>
+        <div class="field"><input type="text" id="subject" name="subject" /><label>Subject</label></div>
+        <div class="field"><textarea id="message" name="message" rows="5" required></textarea><label>Your Message</label></div>
+        <button type="submit" class="btn btn-primary full" id="submitBtn">Send Message <i class="bx bx-send"></i></button>
         <p class="form-note" id="formNote"></p>
       </form>
     </div>

@@ -144,15 +144,64 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- contact form (front-end demo) ---- */
+  /* ---- contact form (connected to backend) ---- */
+  // Change this to your deployed backend URL after hosting, e.g.
+  // 'https://your-app.onrender.com/api/contact'
+  const API_URL = 'http://localhost:5000/api/contact';
+
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
-  form?.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('submitBtn');
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    note.textContent = 'Thanks! Your message has been noted. (Connect a backend or Formspree to actually send.)';
-    form.reset();
-    setTimeout(() => (note.textContent = ''), 6000);
+
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      subject: form.subject.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    // basic client-side guard
+    if (!payload.name || !payload.email || !payload.message) {
+      showNote('Please fill in your name, email, and message.', 'error');
+      return;
+    }
+
+    const originalBtn = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending… <i class="bx bx-loader-alt bx-spin"></i>';
+    showNote('', '');
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        showNote(data.message || 'Message sent successfully! ✅', 'success');
+        form.reset();
+      } else {
+        showNote(data.error || 'Something went wrong. Please try again.', 'error');
+      }
+    } catch (err) {
+      showNote('Could not reach the server. Is the backend running?', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtn;
+    }
   });
+
+  function showNote(msg, type) {
+    if (!note) return;
+    note.textContent = msg;
+    note.style.color = type === 'error' ? '#ff6b8a' : 'var(--accent)';
+    if (msg && type === 'success') setTimeout(() => (note.textContent = ''), 8000);
+  }
 
   onScroll();
 });
