@@ -3,7 +3,13 @@
     "allow": [
       "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\", \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\cmd\\\\git.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\Git\\\\cmd\\\\git.exe\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Get-Command git -ErrorAction SilentlyContinue)",
       "PowerShell(winget install --id Git.Git -e --source winget --accept-source-agreements --accept-package-agreements)",
-      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; if \\(-not \\(Test-Path $git\\)\\) { $git = \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" }; & $git init; & $git add .; & $git -c user.email=\"hello.theorbit@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Add zain.md with portfolio info\"; & $git branch -M main)"
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; if \\(-not \\(Test-Path $git\\)\\) { $git = \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" }; & $git init; & $git add .; & $git -c user.email=\"hello.theorbit@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Add zain.md with portfolio info\"; & $git branch -M main)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git remote add origin https://github.com/ZainNawaz732/personal-portfolio-website.git; & $git push -u origin main)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git clone https://github.com/Shehriyar-Ali-Rustam/Portfolio-Website-Project-Use-it.git \"C:\\\\All projects\\\\personal porfolio website\\\\_reference_friend\")",
+      "PowerShell(Remove-Item -Recurse -Force \"C:\\\\All projects\\\\personal porfolio website\\\\_reference_friend\" -Confirm:$false)",
+      "PowerShell(Remove-Item -Force \"C:\\\\All projects\\\\personal porfolio website\\\\zain.md\" -Confirm:$false)",
+      "PowerShell(Start-Process \"C:\\\\All projects\\\\personal porfolio website\\\\index.html\")",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git -c user.email=\"zainn8847@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Build modern dark glassmorphism portfolio for Zain Nawaz\"; & $git push origin main)"
     ]
   }
 }

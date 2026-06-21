@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Zain Nawaz — Software Engineer. Building beautiful, modern web experiences." />
+  <title>Zain Nawaz — Software Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- animated background blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- cursor glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="#home" class="logo">&lt;<span>Zain Nawaz</span>/&gt;</a>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="bx bx-moon"></i>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="bx bx-menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="home" id="home">
+    <div class="home-content reveal">
+      <p class="eyebrow">👋 Hello, I'm</p>
+      <h1>Zain Nawaz</h1>
+      <h2>I'm a <span class="typed" id="typed"></span></h2>
+      <p class="lead">
+        A Software Engineer who designs and builds fast, accessible, and
+        beautiful web experiences that people love to use.
+      </p>
+
+      <div class="home-cta">
+        <a href="#projects" class="btn btn-primary">View My Work <i class="bx bx-right-arrow-alt"></i></a>
+        <a href="resume.pdf" download class="btn btn-ghost"><i class="bx bx-download"></i> Download CV</a>
+      </div>
+
+      <div class="home-social">
+        <a href="https://github.com/ZainNawaz732" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/zain-nawaz" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="mailto:zainn8847@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="home-visual reveal">
+      <div class="avatar-ring">
+        <div class="avatar">
+          <!-- Replace with your photo: <img src="me.png" alt="Zain Nawaz"> -->
+          <span class="avatar-initials">ZN</span>
+        </div>
+      </div>
+      <div class="floating-badge badge-1"><i class="bx bxl-html5"></i></div>
+      <div class="floating-badge badge-2"><i class="bx bxl-css3"></i></div>
+      <div class="floating-badge badge-3"><i class="bx bxl-javascript"></i></div>
+      <div class="floating-badge badge-4"><i class="bx bxl-react"></i></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats reveal">
+    <div class="stat"><h3 data-count="3">0</h3><p>Years Experience</p></div>
+    <div class="stat"><h3 data-count="24">0</h3><p>Projects Done</p></div>
+    <div class="stat"><h3 data-count="18">0</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3 data-count="12">0</h3><p>Technologies</p></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-img reveal">
+      <div class="img-frame">
+        <span class="avatar-initials big">ZN</span>
+        <!-- Replace with: <img src="about.png" alt="About Zain Nawaz"> -->
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <h4>Software Engineer</h4>
+      <p>
+        I'm Zain Nawaz, a Software Engineer who turns ideas into clean,
+        reliable, and scalable software. I specialize in building modern web
+        applications — from intuitive front-end interfaces to solid back-end
+        logic — with a strong focus on performance, usability, and clean code.
+      </p>
+      <p>
+        I approach every project as a problem worth solving well: thinking
+        through the architecture, sweating the details, and shipping work I'm
+        proud of. Driven by curiosity and a habit of continuous learning, I'm
+        always sharpening my skills and exploring better ways to build.
+      </p>
+      <ul class="about-list">
+        <li><i class="bx bx-check-circle"></i> Clean, maintainable code</li>
+        <li><i class="bx bx-check-circle"></i> Responsive & accessible design</li>
+        <li><i class="bx bx-check-circle"></i> Fast turnaround</li>
+        <li><i class="bx bx-check-circle"></i> Always learning</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Let's Talk <i class="bx bx-right-arrow-alt"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <h2 class="section-title center reveal">My <span>Skills</span></h2>
+    <p class="section-sub center reveal">Technologies and tools I work with</p>
+
+    <div class="skills-grid">
+      <div class="skills-bars reveal">
+        <h3>Technical Skills</h3>
+        <div class="bar" data-percent="95"><div class="bar-head"><span>HTML / CSS</span><span class="pct">95%</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="bar" data-percent="90"><div class="bar-head"><span>JavaScript</span><span class="pct">90%</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="bar" data-percent="80"><div class="bar-head"><span>React</span><span class="pct">80%</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="bar" data-percent="70"><div class="bar-head"><span>Node.js</span><span class="pct">70%</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        <div class="bar" data-percent="85"><div class="bar-head"><span>UI / UX Design</span><span class="pct">85%</span></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+      </div>
+
+      <div class="skills-cards reveal">
+        <h3>Tools &amp; Tech</h3>
+        <div class="tech-grid">
+          <div class="tech"><i class="bx bxl-html5"></i><span>HTML5</span></div>
+          <div class="tech"><i class="bx bxl-css3"></i><span>CSS3</span></div>
+          <div class="tech"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
+          <div class="tech"><i class="bx bxl-react"></i><span>React</span></div>
+          <div class="tech"><i class="bx bxl-nodejs"></i><span>Node.js</span></div>
+          <div class="tech"><i class="bx bxl-git"></i><span>Git</span></div>
+          <div class="tech"><i class="bx bxl-figma"></i><span>Figma</span></div>
+          <div class="tech"><i class="bx bxl-tailwind-css"></i><span>Tailwind</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <h2 class="section-title center reveal">Latest <span>Projects</span></h2>
+    <p class="section-sub center reveal">A selection of things I've built</p>
+
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-img"><span class="ph">Project 1</span></div>
+        <div class="project-body">
+          <span class="tag">Web App</span>
+          <h3>Project Title One</h3>
+          <p>Short description of what this project does and the impact it had.</p>
+          <div class="project-links">
+            <a href="#"><i class="bx bx-link-external"></i> Live</a>
+            <a href="#"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img"><span class="ph">Project 2</span></div>
+        <div class="project-body">
+          <span class="tag">UI / UX</span>
+          <h3>Project Title Two</h3>
+          <p>Short description of what this project does and the impact it had.</p>
+          <div class="project-links">
+            <a href="#"><i class="bx bx-link-external"></i> Live</a>
+            <a href="#"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img"><span class="ph">Project 3</span></div>
+        <div class="project-body">
+          <span class="tag">Landing Page</span>
+          <h3>Project Title Three</h3>
+          <p>Short description of what this project does and the impact it had.</p>
+          <div class="project-links">
+            <a href="#"><i class="bx bx-link-external"></i> Live</a>
+            <a href="#"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <h2 class="section-title center reveal">My <span>Services</span></h2>
+    <p class="section-sub center reveal">What I can do for you</p>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Development</h3>
+        <p>Fast, responsive, and accessible websites built with modern best practices.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="bx bx-palette"></i>
+        <h3>UI / UX Design</h3>
+        <p>Clean, intuitive interfaces and prototypes that delight your users.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="bx bx-mobile-alt"></i>
+        <h3>Responsive Design</h3>
+        <p>Pixel-perfect layouts that look great on every screen size.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <h2 class="section-title center reveal">Get In <span>Touch</span></h2>
+    <p class="section-sub center reveal">Have a project in mind? Let's build it together.</p>
+
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <div class="info-item"><i class="bx bx-envelope"></i><div><h4>Email</h4><p><a href="mailto:zainn8847@gmail.com">zainn8847@gmail.com</a></p></div></div>
+        <div class="info-item"><i class="bx bx-phone"></i><div><h4>Phone</h4><p><a href="tel:+923449816905">+92 344 9816905</a></p></div></div>
+        <div class="info-item"><i class="bx bx-map"></i><div><h4>Location</h4><p>Kharian, Pakistan</p></div></div>
+        <div class="contact-social">
+          <a href="https://github.com/ZainNawaz732" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/zain-nawaz" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="mailto:zainn8847@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="field"><input type="text" id="name" required /><label>Your Name</label></div>
+        <div class="field"><input type="email" id="email" required /><label>Your Email</label></div>
+        <div class="field"><input type="text" id="subject" /><label>Subject</label></div>
+        <div class="field"><textarea id="message" rows="5" required></textarea><label>Your Message</label></div>
+        <button type="submit" class="btn btn-primary full">Send Message <i class="bx bx-send"></i></button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Zain Nawaz. Designed &amp; built with <i class="bx bxs-heart"></i></p>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
