@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Invoke-RestMethod -Uri \"http://localhost:5000/api/health\" -Method Get)",
+      "PowerShell($body = @{ name = \"Test User\"; email = \"test@example.com\"; subject = \"Portfolio form test\"; message = \"Hi Zain, this is a test message from your new contact form backend. If you received this email, the backend works!\" } | ConvertTo-Json; try { Invoke-RestMethod -Uri \"http://localhost:5000/api/contact\" -Method Post -Body $body -ContentType \"application/json\" | ConvertTo-Json } catch { Write-Output \"ERROR: $\\($_.Exception.Message\\)\"; $_.ErrorDetails.Message })",
+      "PowerShell(try { Invoke-RestMethod -Uri \"http://localhost:5000/api/health\" -Method Get -TimeoutSec 5 | ConvertTo-Json } catch { Write-Output \"SERVER DOWN: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:5000/\" -Method Get -TimeoutSec 5; Write-Output \"Page loads: HTTP $\\($r.StatusCode\\), $\\($r.Content.Length\\) bytes\" } catch { Write-Output \"ERROR: $\\($_.Exception.Message\\)\" }; Start-Process \"http://localhost:5000/\")",
+      "PowerShell(Start-Process \"http://localhost:5000/\")",
+      "PowerShell($page = try { $r = Invoke-WebRequest -Uri \"http://localhost:5000/\" -TimeoutSec 5; \"Page: HTTP $\\($r.StatusCode\\)\" } catch { \"Page ERROR: $\\($_.Exception.Message\\)\" }; $api = $body = @{ name = \"Zain Test\"; email = \"test@example.com\"; subject = \"Same-origin test\"; message = \"Testing after the CORS fix.\" } | ConvertTo-Json; $apiRes = try { Invoke-RestMethod -Uri \"http://localhost:5000/api/contact\" -Method Post -Body $api -ContentType \"application/json\" -TimeoutSec 30 | ConvertTo-Json } catch { \"API ERROR: $\\($_.Exception.Message\\)\" }; Write-Output $page; Write-Output \"---\"; Write-Output $apiRes)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git -c user.email=\"zainn8847@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Fix CORS blocking same-origin requests; serve frontend from Node server\"; & $git push origin main)"
+    ]
+  }
+}

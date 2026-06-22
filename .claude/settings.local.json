@@ -14,7 +14,9 @@
       "PowerShell(npm --version)",
       "PowerShell(npm install --prefix \"C:\\\\All projects\\\\personal porfolio website\\\\server\")",
       "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git status --short)",
-      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git status --short)"
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git add -A; & $git status --short)",
+      "PowerShell($git = \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\"; & $git -c user.email=\"zainn8847@gmail.com\" -c user.name=\"ZainNawaz732\" commit -m \"Add photo and Node.js contact form backend \\(Express + Nodemailer\\)\"; & $git push origin main)",
+      "PowerShell(npm start --prefix \"C:\\\\All projects\\\\personal porfolio website\\\\server\")"
     ]
   }
 }

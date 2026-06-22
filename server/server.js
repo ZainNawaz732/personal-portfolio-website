@@ -8,14 +8,21 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import rateLimit from 'express-rate-limit';
 import nodemailer from 'nodemailer';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 /* ---- middleware ---- */
 app.use(express.json({ limit: '10kb' }));
+
+// Serve the portfolio front-end (the parent folder) so everything
+// runs on the same origin — no CORS issues. Visit http://localhost:5000
+app.use(express.static(path.join(__dirname, '..')));
 
 // Allow requests only from your front-end origins (comma-separated in .env)
 const allowed = (process.env.ALLOWED_ORIGINS || '')
@@ -26,11 +33,16 @@ const allowed = (process.env.ALLOWED_ORIGINS || '')
 app.use(
   cors({
     origin(origin, cb) {
-      // allow tools like curl/postman (no origin) and any whitelisted origin
+      // Allow:
+      //  - same-origin / direct navigation (no Origin header)
+      //  - tools like curl/postman
+      //  - any explicitly whitelisted origin
+      // Never throw — a rejected CORS check would also block the static site.
       if (!origin || allowed.length === 0 || allowed.includes(origin)) {
         return cb(null, true);
       }
-      return cb(new Error('Not allowed by CORS'));
+      // Unknown origin: deny CORS headers but don't error out the request.
+      return cb(null, false);
     },
   })
 );

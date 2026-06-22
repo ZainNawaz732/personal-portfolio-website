@@ -145,9 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---- contact form (connected to backend) ---- */
-  // Change this to your deployed backend URL after hosting, e.g.
-  // 'https://your-app.onrender.com/api/contact'
-  const API_URL = 'http://localhost:5000/api/contact';
+  // When the site is served by the Node server (locally on :5000 or when
+  // deployed together), a relative URL works on the same origin.
+  // If you host the frontend separately, set the full backend URL here, e.g.
+  // const API_URL = 'https://your-app.onrender.com/api/contact';
+  const API_URL = '/api/contact';
 
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
